@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>个性化播放器</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- 封面 -->
+			<main class="main">
+				<img src="source/1.jpg">
+				<audio src="source/1.mp3" id="audio">
+					当前浏览器不支持audio
+				</audio>
+			</main>
+			<!-- 组件条 -->
+			<div class="tool">
+				<!-- 上一曲 -->
+				<div class="last">
+					<i class="iconfont icon-yduishangyiqu"></i>
+				</div>
+				<!-- 播放/暂停 -->
+				<div class="btn">
+					<i class="iconfont icon-bofang"></i>
+				</div>
+				<!-- 下一曲 -->
+				<div class="next">
+					<i class="iconfont icon-yduixiayiqu"></i>
+				</div>
+				<!-- 进度条 -->
+				<div class="progress">
+					<!-- 开始时间 -->
+					<div class="current-time"></div>
+					<!-- 条 -->
+					<div class="pro-box">
+						<div class="pro-bg"></div>
+						<div class="active">
+							<div class="radio-box">
+								<span class="radio"></span>
+							</div>
+						</div>
+					</div>
+					<!-- 结束时间 -->
+					<div class="all-time"></div>
+				</div>
+				<!-- 音量 -->
+				<div class="volume">
+					<i class="iconfont icon-volume"></i>
+				</div>
+				<!-- 音量框 -->
+				<div class="volume-box">
+					<div class="volume-value"></div>
+					<div class="volume-bar">
+						<div class="volume-bg"></div>
+						<div class="volume-active">
+							<div class="radio-box-2">
+								<span class="radio-2"></span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

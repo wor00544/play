@@ -1,0 +1,188 @@
+body,ul,li,p,h1,h2,a{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+/* 舞台 */
+.container{
+	/* background: #ccc; */
+	width: 600px;
+	margin:0 auto ;
+	padding-top: 100px;
+}
+/* 封面 */
+.main{
+	width: 100%;	
+	text-align: center;
+	
+}
+.main img{
+	width: 200px;
+	height: 200px;
+	border: 50px solid #444;
+	border-radius: 50%;
+	animation: move 20s linear infinite;
+}
+
+@keyframes move{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+}
+/* 组件条 */
+.tool{
+	position: relative;
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 20px;
+	margin-top: 100px;
+}
+/* 按钮 */
+.last,.btn,.next,.volume{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+}
+.tool i{
+	font-size: 30px;
+	color: #fff;
+	cursor: pointer;
+}
+.last{
+	left: 20px;
+}
+.btn{
+	left: 50px;
+}
+.next{
+	left: 80px;
+}
+.volume{
+	right: 30px;
+}
+
+/* 进度条 */
+.progress{
+	width: 400px;
+	height: 30px;
+	/* background: #333; */
+	position: absolute;
+	left: 50%;
+	margin-left: -180px;
+	top: 50%;
+	margin-top: -15px;
+}
+
+/* 时间 */
+.progress .current-time,.all-time{
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+	user-select:none;
+}
+.current-time{
+	float: left;
+}
+.all-time{
+	float: right;
+}
+
+/* 条 */
+.progress .pro-box{
+	width: 240px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	margin-top: -1px;
+	left: 80px;
+}
+.progress .pro-box .pro-bg,
+.volume-box .volume-bar .volume-bg{
+	width: 100%;
+	height: 2px;
+	background: #000;
+}
+.progress .pro-box .active,
+.volume-box .volume-active{
+	width: 8px;
+	height: 2px;
+	background: #FFF;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.progress .pro-box .radio-box,
+.volume-box .radio-box-2{
+	width: 20px;
+	height: 20px;
+	/* background: red; */
+	position: absolute;
+	top: -9px;
+	right: -6px;
+	cursor: pointer;
+}
+.progress .pro-box .radio-box .radio,
+.volume-box .radio-box-2 .radio-2{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	margin-top: -4px;
+	left: 50%;
+	margin-left: -4px;
+}
+
+/* 音量 */
+.volume-box{
+	display: none;
+	position: absolute;
+	width: 230px;
+	height: 50px;
+	right: -85px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 15px;
+	top: -55px;
+}
+.volume-box .volume-value{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-weight: 700;
+	user-select: none;
+}
+.volume-box .volume-bar{
+	width: 180px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	margin-top: -1px;
+	right: 5px;
+}
